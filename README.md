@@ -112,13 +112,13 @@
                    <%= link_to 'Edit', edit_article_path(@article) %> |
                    <%= link_to 'Back', articles_path %>
             
-   *  修改app/models/article.rb文件，修改为
+*  修改app/models/article.rb文件，修改为
       
             class Article < ApplicationRecord
                   validates :title, presence: true,
                    length: { minimum: 3 }
             end
-  * 启动项目即可
+* 启动项目即可
     ![如图](https://github.com/zhangYongHong/Ruby/blob/master/Images/%E6%93%8D%E4%BD%9C%E8%BF%87%E7%A8%8B5.png)
   
   
