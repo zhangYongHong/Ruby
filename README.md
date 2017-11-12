@@ -29,6 +29,10 @@
 * 运行迁移：
                  
              rails db:migrate
+             
+  ![如图](https://github.com/zhangYongHong/Ruby/blob/master/Images/%E6%93%8D%E4%BD%9C%E8%BF%87%E7%A8%8B3.png)
+  
+  
             
 * 修改articles_controller.rb文件
             
@@ -38,47 +42,48 @@
             
 * 修改view文件
 
-       1.修改/app/view/articles/_form.html.erb文件为：
+     *  1.修改/app/view/articles/_form.html.erb文件为：
 
-         <%= form_for @article do |f| %>  
-         <% if @article.errors.any? %>
-            <div id="error_explanation">
-            <h2><%= pluralize(@article.errors.count, "error") %> prohibited this article from being saved：</h2>
-                  <ul>
-                   <% @article.errors.full_messages.each do |message| %>
-                   <li><%= message %></li>
-                   <% end %>
-            </ul>
-            </div>
-       <% end %>
+      
+               <%= form_for @article do |f| %>  
+                    <% if @article.errors.any? %>
+                        <div id="error_explanation">
+                   <h2><%= pluralize(@article.errors.count, "error") %> prohibited this article from being saved：</h2>
+                   <ul>
+                        <% @article.errors.full_messages.each do |message| %>
+                         <li><%= message %></li>
+                         <% end %>
+                  </ul>
+                  </div>
+            <% end %>
 
-      <p>
-             <%= f.label :title %><br>
-             <%= f.text_field :title %>
-      </p>
-      <p>
-        <%= f.label :text %><br>
-        <%= f.text_area :text %>
-      </p>
-      <p>
-            <%= f.submit %>
-      </p>
-      <% end %>
+             <p>
+                   <%= f.label :title %><br>
+              <%= f.text_field :title %>
+             </p>
+             <p>
+                  <%= f.label :text %><br>
+                  <%= f.text_area :text %>
+             </p>
+             <p>
+                        <%= f.submit %>
+              </p>
+             <% end %>
       
       
-      2.修改index.html.erb文件为：
-      
-      <p id="notice"><%= notice %></p>
-            <h1>Articles</h1>
-            <table>
-                  <thead>
-                        <tr>
-                              <th>Title</th><!--new-->
-                              <th>Text</th><!--new-->
-                              <th colspan="3"></th>
+     * 2.修改index.html.erb文件为：
+       
+            <p id="notice"><%= notice %></p>
+                <h1>Articles</h1>
+               <table>
+                      <thead>
+                            <tr>
+                                <th>Title</th><!--new-->
+                                <th>Text</th><!--new-->
+                                <th colspan="3"></th>
                          </tr>
-                  </thead>
-            <tbody>
+                     </thead>
+               <tbody>
                    <% @articles.each do |article| %>
                     <tr>
                                <td><%= article.title %></td><!--new-->
@@ -93,27 +98,46 @@
             <br>
             <%= link_to 'New Article', new_article_path %>
             
-         3.修改show.html.erb文件为：
-         <p id="notice"><%= notice %></p>
-            <p>
-             <strong>Title:</strong>
-            <%= @article.title %>
-            </p>
-            <p>
-             <strong>Text:</strong>
-             <%= @article.text %>
-            </p>
-            <%= link_to 'Edit', edit_article_path(@article) %> |
-            <%= link_to 'Back', articles_path %>
+      * 3.修改show.html.erb文件为：
+        
+            <p id="notice"><%= notice %></p>
+                  <p>
+                    <strong>Title:</strong>
+                        <%= @article.title %>
+                   </p>
+                   <p>
+                         <strong>Text:</strong>
+                        <%= @article.text %>
+                  </p>
+                   <%= link_to 'Edit', edit_article_path(@article) %> |
+                   <%= link_to 'Back', articles_path %>
             
-   *修改app/models/article.rb文件，修改为
+   *  修改app/models/article.rb文件，修改为
       
             class Article < ApplicationRecord
                   validates :title, presence: true,
                    length: { minimum: 3 }
             end
-            
+  * 启动项目即可
+    ![如图](https://github.com/zhangYongHong/Ruby/blob/master/Images/%E6%93%8D%E4%BD%9C%E8%BF%87%E7%A8%8B5.png)
+  
+  
   ### 这样我们成功建立了一个可以新建、读取查询、更新和删除文章的blog系统
-      
-      
+  
+  
+---
+  #### 效果图如下
+  
+  
+  ![增加文章](https://github.com/zhangYongHong/Ruby/blob/master/Images/%E5%A2%9E%E5%8A%A0%E6%96%87%E7%AB%A0.png)
+  
+  
+  ![删除文章](https://github.com/zhangYongHong/Ruby/blob/master/Images/%E5%88%A0%E9%99%A4aaaa%E8%BF%99%E7%AF%87%E6%96%87%E7%AB%A0.png)
+  
+  ![更新文章](https://github.com/zhangYongHong/Ruby/blob/master/Images/%E4%BF%AE%E6%94%B9.png)
+  
+ 
+  
+  
+ 
    
