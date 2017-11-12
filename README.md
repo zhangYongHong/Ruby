@@ -11,4 +11,4 @@
       rails g scaffold article
       
   
-  ![出现以下提示](http://...)
+  ![出现以下提示](https://github.com/zhangYongHong/Ruby/blob/master/Images/%E6%93%8D%E4%BD%9C%E8%BF%87%E7%A8%8B2.png)
