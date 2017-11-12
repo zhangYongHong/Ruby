@@ -136,7 +136,7 @@
   
   ![更新文章](https://github.com/zhangYongHong/Ruby/blob/master/Images/%E4%BF%AE%E6%94%B9.png)
   
- 
+  ![更新文章效果](https://github.com/zhangYongHong/Ruby/blob/master/Images/%E4%BF%AE%E6%94%B9%E6%88%90%E5%8A%9F%E5%90%8E%E6%88%AA%E5%9B%BE.png)
   
   
  
